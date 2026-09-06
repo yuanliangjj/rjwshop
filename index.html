@@ -1,23 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Picks</title>
+
+  <title>My Picks ♡</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f7f4;
+      color: #333;
+      padding: 24px 16px 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* CATEGORY */
+    .category {
+      margin-bottom: 32px;
+    }
+
+    .category-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    /* PRODUCT GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .product:active {
+      transform: scale(0.97);
+    }
+
+    .product img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-info {
+      padding: 12px;
+    }
+
+    .product-name {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .product-description {
+      font-size: 11px;
+      color: #999;
+      margin-bottom: 9px;
+    }
+
+    .shop {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      margin-top: 45px;
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    /* DESKTOP */
+    @media (min-width: 600px) {
+      body {
+        padding: 50px 20px;
+      }
+
+      .products {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>My Picks ♡</h1>
+  <div class="container">
 
-  <p>Things I want to buy</p>
+    <!-- HEADER -->
+    <header>
+      <h1>My Picks ♡</h1>
+      <p>little things I want to have</p>
+    </header>
 
-  <img src="https://via.placeholder.com/300" width="100%">
-  
-  <h2>My Wishlist</h2>
 
-  <a href="https://shopee.co.id" target="_blank">
-    Shop Now →
-  </a>
+    <!-- FASHION -->
+    <section class="category">
+
+      <h2 class="category-title">Fashion</h2>
+
+      <div class="products">
+
+        <!-- PRODUCT 1 -->
+        <a class="product"
+           href="https://shopee.co.id/"
+           target="_blank">
+
+          <img
+            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+            alt="Bag">
+
+          <div class="product-info">
+            <div class="product-name">
+              Shoulder Bag
+            </div>
+
+            <div class="product-description">
+              everyday bag
+            </div>
+
+            <div class="shop">
+              SHOP →
+            </div>
+          </div>
+
+        </a>
+
+
+        <!-- PRODUCT 2 -->
+        <a class="product"
+           href="https://shopee.co.id/"
+           target="_blank">
+
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+            alt="Shoes">
+
+          <div class="product-info">
+            <div class="product-name">
+              Sneakers
+            </div>
+
+            <div class="product-description">
+              daily shoes
+            </div>
+
+            <div class="shop">
+              SHOP →
+            </div>
+          </div>
+
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- BEAUTY -->
+    <section class="category">
+
+      <h2 class="category-title">Beauty</h2>
+
+      <div class="products">
+
+        <!-- PRODUCT 3 -->
+        <a class="product"
+           href="https://shopee.co.id/"
+           target="_blank">
+
+          <img
+            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600"
+            alt="Lipstick">
+
+          <div class="product-info">
+            <div class="product-name">
+              Lip Tint
+            </div>
+
+            <div class="product-description">
+              everyday makeup
+            </div>
+
+            <div class="shop">
+              SHOP →
+            </div>
+          </div>
+
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- ROOM -->
+    <section class="category">
+
+      <h2 class="category-title">Room</h2>
+
+      <div class="products">
+
+        <!-- PRODUCT 4 -->
+        <a class="product"
+           href="https://shopee.co.id/"
+           target="_blank">
+
+          <img
+            src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+            alt="Lamp">
+
+          <div class="product-info">
+            <div class="product-name">
+              Table Lamp
+            </div>
+
+            <div class="product-description">
+              cozy room
+            </div>
+
+            <div class="shop">
+              SHOP →
+            </div>
+          </div>
+
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+      made with ♡
+    </footer>
+
+  </div>
 
 </body>
 </html>

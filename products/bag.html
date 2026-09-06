@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Shoulder Bag — My Picks</title>
+  <title>Shoulder Bags — My Picks</title>
 
   <style>
 
@@ -26,146 +26,110 @@
     }
 
     .container {
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
     }
-
 
     /* BACK */
 
     .back {
       display: inline-block;
-      margin-bottom: 25px;
-
+      margin-bottom: 30px;
       font-size: 12px;
       color: #888;
-
       text-decoration: none;
     }
 
+    /* TITLE */
 
-    /* PRODUCT IMAGE */
-
-    .main-image {
-      width: 100%;
-      border-radius: 16px;
-      display: block;
-      margin-bottom: 24px;
+    .title {
+      margin-bottom: 30px;
     }
 
-
-    /* PRODUCT INFO */
-
-    .product-name {
-      font-size: 24px;
+    .title h1 {
+      font-size: 25px;
       font-weight: 500;
       margin-bottom: 7px;
     }
 
-    .description {
+    .title p {
       font-size: 12px;
       color: #999;
-      margin-bottom: 30px;
     }
 
+    /* PRODUCT LIST */
 
-    /* DIVIDER */
-
-    .divider {
-      height: 1px;
-      background: #e8e6e2;
-      margin: 25px 0;
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
     }
 
-
-    /* PRICE TITLE */
-
-    .comparison-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-
-
-    /* PRICE CARD */
-
-    .price-card {
+    .product {
       background: white;
-      border-radius: 13px;
-      padding: 16px;
-      margin-bottom: 10px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
 
+    .product-image {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-name {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    /* PRICE */
+
+    .price-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
-    }
-
-
-    .store {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 6px;
+      gap: 10px;
     }
 
     .price {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 15px;
+      color: #555;
     }
 
+    .price.cheapest {
+      font-weight: 700;
+      color: #222;
+    }
 
-    /* CHEAPEST */
-
-    .cheapest {
+    .cheapest-label {
       font-size: 9px;
-      letter-spacing: 0.5px;
-      background: #eee;
-      padding: 4px 7px;
-      border-radius: 20px;
       margin-left: 5px;
+      letter-spacing: 0.5px;
     }
 
+    /* SHOPEE BUTTON */
 
-    /* SHOP BUTTON */
-
-    .shop-button {
-      display: inline-block;
-
+    .shopee {
       background: #333;
       color: white;
-
-      padding: 9px 13px;
-
-      border-radius: 20px;
-
-      font-size: 10px;
-
       text-decoration: none;
-
+      padding: 9px 13px;
+      border-radius: 20px;
+      font-size: 10px;
       white-space: nowrap;
     }
-
-
-    /* NOTES */
-
-    .notes-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .notes {
-      font-size: 12px;
-      line-height: 1.7;
-      color: #888;
-    }
-
 
     /* FOOTER */
 
     footer {
       text-align: center;
-      margin-top: 45px;
+      margin-top: 50px;
     }
 
     footer p {
@@ -191,146 +155,192 @@
   </a>
 
 
-  <!-- MAIN IMAGE -->
+  <!-- TITLE -->
 
-  <img
-    class="main-image"
-    src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1000"
-    alt="Shoulder Bag"
-  >
+  <div class="title">
 
+    <h1>Shoulder Bags</h1>
 
-  <!-- PRODUCT NAME -->
+    <p>
+      comparing before I buy ♡
+    </p>
 
-  <h1 class="product-name">
-    Shoulder Bag
-  </h1>
-
-  <p class="description">
-    everyday black shoulder bag
-  </p>
+  </div>
 
 
-  <div class="divider"></div>
+  <!-- PRODUCTS -->
+
+  <div class="products">
 
 
-  <!-- PRICE COMPARISON -->
+    <!-- PRODUCT 1 -->
 
-  <h2 class="comparison-title">
-    Price comparison
-  </h2>
+    <div class="product">
 
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1000"
+        alt="Black Shoulder Bag"
+      >
 
-  <!-- SHOPEE -->
+      <div class="product-info">
 
-  <div class="price-card">
+        <div class="product-name">
+          Black Shoulder Bag
+        </div>
 
-    <div>
+        <div class="price-row">
 
-      <div class="store">
-        Shopee
+          <div class="price">
+            Rp129.000
+          </div>
 
-        <span class="cheapest">
-          CHEAPEST
-        </span>
-      </div>
+          <a
+            href="https://shopee.co.id/"
+            target="_blank"
+            class="shopee"
+          >
+            SHOPEE →
+          </a>
 
-      <div class="price">
-        Rp129.000
+        </div>
+
       </div>
 
     </div>
 
 
-    <a
-      href="https://shopee.co.id/"
-      target="_blank"
-      class="shop-button"
-    >
-      VIEW SHOP →
-    </a>
 
-  </div>
+    <!-- PRODUCT 2 -->
 
+    <div class="product">
 
-  <!-- TOKOPEDIA -->
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=1000"
+        alt="Mini Shoulder Bag"
+      >
 
-  <div class="price-card">
+      <div class="product-info">
 
-    <div>
+        <div class="product-name">
+          Mini Shoulder Bag
+        </div>
 
-      <div class="store">
-        Tokopedia
-      </div>
+        <div class="price-row">
 
-      <div class="price">
-        Rp135.000
-      </div>
+          <div class="price">
+            Rp99.000
+          </div>
 
-    </div>
+          <a
+            href="https://shopee.co.id/"
+            target="_blank"
+            class="shopee"
+          >
+            SHOPEE →
+          </a>
 
+        </div>
 
-    <a
-      href="https://www.tokopedia.com/"
-      target="_blank"
-      class="shop-button"
-    >
-      VIEW SHOP →
-    </a>
-
-  </div>
-
-
-  <!-- OFFICIAL STORE -->
-
-  <div class="price-card">
-
-    <div>
-
-      <div class="store">
-        Official Store
-      </div>
-
-      <div class="price">
-        Rp149.000
       </div>
 
     </div>
 
 
-    <a
-      href="https://www.google.com/"
-      target="_blank"
-      class="shop-button"
-    >
-      VIEW SHOP →
-    </a>
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product">
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1000"
+        alt="Vintage Shoulder Bag"
+      >
+
+      <div class="product-info">
+
+        <div class="product-name">
+          Vintage Shoulder Bag
+        </div>
+
+        <div class="price-row">
+
+          <div class="price">
+            Rp149.000
+          </div>
+
+          <a
+            href="https://shopee.co.id/"
+            target="_blank"
+            class="shopee"
+          >
+            SHOPEE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
 
   </div>
-
-
-  <div class="divider"></div>
-
-
-  <!-- NOTES -->
-
-  <h2 class="notes-title">
-    Notes
-  </h2>
-
-  <p class="notes">
-    Black color · medium size<br>
-    Looks good for everyday use.<br>
-    Maybe buy next month ♡
-  </p>
 
 
   <footer>
-    <p>♡ my little shopping catalog</p>
+
+    <p>
+      ♡ compare first, buy later
+    </p>
+
   </footer>
 
 
 </div>
+
+
+<script>
+
+  /*
+    AUTOMATICALLY FIND
+    THE CHEAPEST PRICE
+  */
+
+  const prices = document.querySelectorAll(".price");
+
+  let cheapest = null;
+  let cheapestValue = Infinity;
+
+
+  prices.forEach(function(price) {
+
+    const number = parseInt(
+      price.innerText
+        .replace(/[^0-9]/g, "")
+    );
+
+    if (number < cheapestValue) {
+
+      cheapestValue = number;
+      cheapest = price;
+
+    }
+
+  });
+
+
+  if (cheapest) {
+
+    cheapest.classList.add("cheapest");
+
+    cheapest.innerHTML +=
+      '<span class="cheapest-label">CHEAPEST ♡</span>';
+
+  }
+
+</script>
 
 
 </body>

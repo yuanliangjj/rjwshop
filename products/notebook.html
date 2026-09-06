@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRODUCT CATEGORY ♡</title>
+  <style>
+    /* ================================
+       COLOR PALETTE
+       ================================ */
+    :root {
+      --blue-bright: #5BB1DD;
+      --blue: #5391B0;
+      --navy: #3F4C6B;
+      --deep: #3A3E58;
+      --gray: #595960;
+      --purple: #846688;
+      --plum: #786081;
+      --muted: #A89A9E;
+      --background: #F8FAFB;
+      --white: #FFFFFF;
+    }
+    /* ================================
+       RESET
+       ================================ */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--background);
+      color: var(--gray);
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 28px 15px 55px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* ================================
+       CONTAINER
+       ================================ */
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    /* ================================
+       BACK BUTTON
+       ================================ */
+    .back {
+      display: inline-flex;
+      align-items: center;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      margin-bottom: 30px;
+      transition: 0.25s ease;
+    }
+    .back:hover {
+      color: var(--blue);
+      transform: translateX(-3px);
+    }
+    /* ================================
+       HEADER
+       ================================ */
+    .page-header {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+    .page-header h1 {
+      color: var(--navy);
+      font-size: 27px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .page-header h1::after {
+      content: " ♡";
+      color: var(--blue-bright);
+      font-size: 20px;
+    }
+    .page-header p {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.7px;
+    }
+    /* ================================
+       PRODUCT GRID
+       ================================ */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 13px;
+    }
+    /* ================================
+       PRODUCT
+       ================================ */
+    .product {
+      min-width: 0;
+    }
+    /* ================================
+       IMAGE
+       ================================ */
+    .image-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #EDF4F8;
+    }
+    .image-wrap img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      transition:
+        transform 0.45s ease,
+        filter 0.4s ease;
+    }
+    /* ================================
+       HOVER OVERLAY
+       ================================ */
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(58, 62, 88, 0.55);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-overlay span {
+      color: white;
+      font-size: 11px;
+      letter-spacing: 0.7px;
+      text-align: center;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 20px;
+      backdrop-filter: blur(3px);
+    }
+    .product:hover .image-overlay {
+      opacity: 1;
+    }
+    .product:hover .image-wrap img {
+      transform: scale(1.05);
+      filter: saturate(0.88);
+    }
+    /* ================================
+       PRODUCT INFO
+       ================================ */
+    .product-info {
+      padding: 10px 2px 0;
+    }
+    .product-name {
+      color: var(--navy);
+      font-size: 12px;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    /* ================================
+       PRICE
+       ================================ */
+    .price {
+      color: var(--gray);
+      font-size: 12px;
+      margin-bottom: 9px;
+      transition: 0.2s ease;
+    }
+    .price.cheapest {
+      color: var(--plum);
+      font-weight: 700;
+    }
+    .cheapest-label {
+      display: inline-block;
+      margin-left: 5px;
+      color: var(--purple);
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+    /* ================================
+       SHOPEE BUTTON
+       ================================ */
+    .shopee {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 6px 11px;
+      border-radius: 20px;
+      background: var(--blue);
+      color: white;
+      font-size: 9px;
+      letter-spacing: 0.4px;
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+    .shopee::before {
+      content: "↗";
+      font-size: 10px;
+    }
+    .shopee:hover {
+      background: var(--plum);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(63, 76, 107, 0.16);
+    }
+    /* ================================
+       FOOTER
+       ================================ */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+    }
+    footer p {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+    footer p::before {
+      content: "♡  ";
+      color: var(--purple);
+    }
+    /* ================================
+       DESKTOP
+       ================================ */
+    @media (min-width: 600px) {
+      body {
+        padding: 45px 30px 70px;
+      }
+      .page-header {
+        margin-bottom: 45px;
+      }
+      .page-header h1 {
+        font-size: 32px;
+      }
+      .products {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back">
+      ← back to my picks
+    </a>
+    <header class="page-header">
+      <h1>PRODUCT CATEGORY</h1>
+      <p>
+        little things I'm currently eyeing ♡
+      </p>
+    </header>
+    <div class="products">
+      <!-- PRODUCT 1 -->
+      <div class="product">
+        <a href="SHOPEE_LINK" target="_blank">
+          <div class="image-wrap">
+            <img
+              src="IMAGE_URL"
+              alt="PRODUCT NAME"
+            >
+            <div class="image-overlay">
+              <span>PRODUCT NAME ♡</span>
+            </div>
+          </div>
+        </a>
+        <div class="product-info">
+          <div class="product-name">
+            PRODUCT NAME
+          </div>
+          <div class="price">
+            Rp129.000
+          </div>
+          <a
+            href="SHOPEE_LINK"
+            target="_blank"
+            class="shopee"
+          >
+            view on Shopee
+          </a>
+        </div>
+      </div>
+      <!-- PRODUCT 2 -->
+      <div class="product">
+        <a href="SHOPEE_LINK" target="_blank">
+          <div class="image-wrap">
+            <img
+              src="IMAGE_URL"
+              alt="PRODUCT NAME"
+            >
+            <div class="image-overlay">
+              <span>PRODUCT NAME ♡</span>
+            </div>
+          </div>
+        </a>
+        <div class="product-info">
+          <div class="product-name">
+            PRODUCT NAME
+          </div>
+          <div class="price">
+            Rp99.000
+          </div>
+          <a
+            href="SHOPEE_LINK"
+            target="_blank"
+            class="shopee"
+          >
+            view on Shopee
+          </a>
+        </div>
+      </div>
+      <!-- PRODUCT 3 -->
+      <div class="product">
+        <a href="SHOPEE_LINK" target="_blank">
+          <div class="image-wrap">
+            <img
+              src="IMAGE_URL"
+              alt="PRODUCT NAME"
+            >
+            <div class="image-overlay">
+              <span>PRODUCT NAME ♡</span>
+            </div>
+          </div>
+        </a>
+        <div class="product-info">
+          <div class="product-name">
+            PRODUCT NAME
+          </div>
+          <div class="price">
+            Rp149.000
+          </div>
+          <a
+            href="SHOPEE_LINK"
+            target="_blank"
+            class="shopee"
+          >
+            view on Shopee
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        still thinking about it...
+      </p>
+    </footer>
+  </div>
+  <!-- ================================
+       AUTOMATIC CHEAPEST PRICE
+       ================================ -->
+  <script>
+    const prices = document.querySelectorAll(".price");
+    let cheapest = null;
+    let cheapestValue = Infinity;
+    prices.forEach(function(price) {
+      const number =
+        parseInt(
+          price.innerText.replace(/[^0-9]/g, "")
+        );
+      if (number < cheapestValue) {
+        cheapestValue = number;
+        cheapest = price;
+      }
+    });
+    if (cheapest) {
+      cheapest.classList.add("cheapest");
+      cheapest.innerHTML +=
+        '<span class="cheapest-label">CHEAPEST ♡</span>';
+    }
+  </script>
+</body>
+</html>

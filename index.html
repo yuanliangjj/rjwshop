@@ -6,276 +6,184 @@
 
   <title>My Picks ♡</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f7f4;
-      color: #333;
-      padding: 24px 16px 40px;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    /* HEADER */
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    header h1 {
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 13px;
-      color: #888;
-    }
-
-    /* CATEGORY */
-    .category {
-      margin-bottom: 32px;
-    }
-
-    .category-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-
-    /* PRODUCT GRID */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.2s ease;
-    }
-
-    .product:active {
-      transform: scale(0.97);
-    }
-
-    .product img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-    }
-
-    .product-info {
-      padding: 12px;
-    }
-
-    .product-name {
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
-
-    .product-description {
-      font-size: 11px;
-      color: #999;
-      margin-bottom: 9px;
-    }
-
-    .shop {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      margin-top: 45px;
-      font-size: 11px;
-      color: #aaa;
-    }
-
-    /* DESKTOP */
-    @media (min-width: 600px) {
-      body {
-        padding: 50px 20px;
-      }
-
-      .products {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
-
-    <!-- HEADER -->
-    <header>
-      <h1>My Picks ♡</h1>
-      <p>little things I want to have</p>
-    </header>
+  <header class="header">
+    <h1>My Picks ♡</h1>
+    <p>things I want, love & need</p>
+  </header>
 
 
-    <!-- FASHION -->
-    <section class="category">
+  <main>
 
-      <h2 class="category-title">Fashion</h2>
 
-      <div class="products">
+    <!-- ==================== -->
+    <!-- PRIORITY -->
+    <!-- ==================== -->
 
-        <!-- PRODUCT 1 -->
-        <a class="product"
-           href="https://shopee.co.id/"
-           target="_blank">
+    <section class="section">
 
-          <img
-            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
-            alt="Bag">
+      <div class="section-header">
+        <h2>Priority</h2>
+        <span>must have</span>
+      </div>
 
-          <div class="product-info">
-            <div class="product-name">
-              Shoulder Bag
+      <div class="masonry">
+
+
+        <!-- PRODUCT -->
+        <a href="products/bag.html" class="pin">
+
+          <div class="image-wrap">
+
+            <img
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800"
+              alt="Shoulder Bag">
+
+            <div class="overlay">
+              <span>Shoulder Bag</span>
             </div>
 
-            <div class="product-description">
-              everyday bag
-            </div>
-
-            <div class="shop">
-              SHOP →
-            </div>
           </div>
+
+          <p>Shoulder Bag</p>
 
         </a>
 
 
-        <!-- PRODUCT 2 -->
-        <a class="product"
-           href="https://shopee.co.id/"
-           target="_blank">
+        <!-- PRODUCT -->
+        <a href="products/shoes.html" class="pin">
 
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
-            alt="Shoes">
+          <div class="image-wrap">
 
-          <div class="product-info">
-            <div class="product-name">
-              Sneakers
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800"
+              alt="Sneakers">
+
+            <div class="overlay">
+              <span>Sneakers</span>
             </div>
 
-            <div class="product-description">
-              daily shoes
-            </div>
-
-            <div class="shop">
-              SHOP →
-            </div>
           </div>
 
+          <p>Sneakers</p>
+
         </a>
+
 
       </div>
+
     </section>
 
 
-    <!-- BEAUTY -->
-    <section class="category">
 
-      <h2 class="category-title">Beauty</h2>
+    <!-- ==================== -->
+    <!-- WISHLIST -->
+    <!-- ==================== -->
 
-      <div class="products">
+    <section class="section">
 
-        <!-- PRODUCT 3 -->
-        <a class="product"
-           href="https://shopee.co.id/"
-           target="_blank">
+      <div class="section-header">
+        <h2>Wishlist</h2>
+        <span>maybe someday</span>
+      </div>
 
-          <img
-            src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600"
-            alt="Lipstick">
+      <div class="masonry">
 
-          <div class="product-info">
-            <div class="product-name">
-              Lip Tint
+
+        <a href="products/lipstick.html" class="pin">
+
+          <div class="image-wrap">
+
+            <img
+              src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800"
+              alt="Lip Tint">
+
+            <div class="overlay">
+              <span>Lip Tint</span>
             </div>
 
-            <div class="product-description">
-              everyday makeup
-            </div>
-
-            <div class="shop">
-              SHOP →
-            </div>
           </div>
+
+          <p>Lip Tint</p>
 
         </a>
 
-      </div>
-    </section>
 
+        <a href="products/lamp.html" class="pin">
 
-    <!-- ROOM -->
-    <section class="category">
+          <div class="image-wrap">
 
-      <h2 class="category-title">Room</h2>
+            <img
+              src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800"
+              alt="Table Lamp">
 
-      <div class="products">
-
-        <!-- PRODUCT 4 -->
-        <a class="product"
-           href="https://shopee.co.id/"
-           target="_blank">
-
-          <img
-            src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
-            alt="Lamp">
-
-          <div class="product-info">
-            <div class="product-name">
-              Table Lamp
+            <div class="overlay">
+              <span>Table Lamp</span>
             </div>
 
-            <div class="product-description">
-              cozy room
-            </div>
-
-            <div class="shop">
-              SHOP →
-            </div>
           </div>
+
+          <p>Table Lamp</p>
 
         </a>
 
+
       </div>
+
     </section>
 
 
-    <!-- FOOTER -->
-    <footer>
-      made with ♡
-    </footer>
 
-  </div>
+    <!-- ==================== -->
+    <!-- ALL OTHER THINGS -->
+    <!-- ==================== -->
+
+    <section class="section">
+
+      <div class="section-header">
+        <h2>All Other Things</h2>
+        <span>just because</span>
+      </div>
+
+      <div class="masonry">
+
+
+        <a href="products/notebook.html" class="pin">
+
+          <div class="image-wrap">
+
+            <img
+              src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=800"
+              alt="Notebook">
+
+            <div class="overlay">
+              <span>Notebook</span>
+            </div>
+
+          </div>
+
+          <p>Notebook</p>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <footer>
+    <p>♡ my little corner of things</p>
+  </footer>
+
 
 </body>
 </html>
